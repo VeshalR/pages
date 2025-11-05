@@ -78,7 +78,11 @@ if ($upass == ''){
 
          } else {
                  # code...
-        echo "Error: " . $sql . "<br>" . $db->error;
+        if ($db) {
+            echo "Error: " . $sql . "<br>" . (is_object($db) ? $db->error : "Invalid database connection.");
+        } else {
+            echo "Database connection error.";
+        }
         }
         
     }       
