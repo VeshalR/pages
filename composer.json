@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twilio/sdk": "^8.8",
+        "sonata-project/google-authenticator": "^2.3"
+    }
+}
